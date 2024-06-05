@@ -18,7 +18,7 @@ export const EmptyBoards = (): React.ReactNode => {
 			orgId: organization.id,
 			title: 'Untitled'
 		})
-			.then(id => {
+			.then((id: string) => {
 				console.log(id);
 				toast.success('Board created');
 			})
