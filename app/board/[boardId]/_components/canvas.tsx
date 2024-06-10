@@ -239,7 +239,7 @@ export const Canvas = ({ boardId }: CanvasProps): React.ReactNode => {
 			}
 
 			const bounds = resizeBounds(
-				canvasState.initialBounds as XYWH,
+				canvasState.initialBounds,
 				canvasState.corner,
 				point
 			);

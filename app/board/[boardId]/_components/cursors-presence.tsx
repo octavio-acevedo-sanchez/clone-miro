@@ -6,7 +6,6 @@ import { Cursor } from './cursor';
 import { shallow } from '@liveblocks/client';
 import { Path } from './path';
 import { colorToCss } from '@/lib/utils';
-import type { Color } from '@/types/canvas';
 
 const Cursors = (): React.ReactNode => {
 	const ids = useOthersConnectionIds();
@@ -39,9 +38,7 @@ const Drafts = (): React.ReactNode => {
 							x={0}
 							y={0}
 							points={other.pencilDraft}
-							fill={
-								other.penColor ? colorToCss(other.penColor as Color) : '#000'
-							}
+							fill={other.penColor ? colorToCss(other.penColor) : '#000'}
 						/>
 					);
 				}
